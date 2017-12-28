@@ -5,10 +5,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-    entry: "./action/index.js",
+    entry: "./antv-g2/action/index.js",
     output: {
-        path: path.resolve(__dirname, "./action/build"),
-        publicPath: "./action/build/",
+        path: path.resolve(__dirname, "./antv-g2/action/build"),
+        publicPath: "./antv-g2/action/build/",
         filename: "bundle.js"
     },
     module: {

@@ -1,0 +1,19 @@
+h1 {
+    font-family: "微软雅黑", Arial, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    /*margin-top: 10px;*/
+}
+
+.jumbotron {
+    padding: 5px;
+    border-radius: 0;
+}
+
+.col-md-4:not(:last-child) {
+    border-right: 1px dashed #bd4147;
+}
+
+ul {
+    padding-left: 15px;
+}
