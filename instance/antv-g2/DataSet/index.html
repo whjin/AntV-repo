@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AntV-G2-DataSet</title>
+</head>
+<body>
+<div id="c1"></div>
+<script src="https://gw.alipayobjects.com/os/antv/assets/g2/3.0.2/g2.min.js"></script>
+<script src="https://gw.alipayobjects.com/os/antv/assets/data-set/0.8.0/data-set.min.js"></script>
+<script>
+    const data = [
+        {genre: 'Sports', sold: 275},
+        {genre: 'Strategy', sold: 115},
+        {genre: 'Action', sold: 120},
+        {genre: 'Shooter', sold: 350},
+        {genre: 'Other', sold: 150}
+    ];
+
+    const chart = new G2.Chart({
+        container: 'c1',
+        width: 600,
+        height: 300
+    });
+
+    const ds = new DataSet({
+        state: {
+            currentState: 'WY'
+        }
+    });
+
+    const dv = ds.createView().source(data);
+
+    dv.transform({
+        type: 'filter',
+        callback(row) {
+            return row.year === ds.state.year
+        }
+    });
+
+    chart.source(data);
+    ds.setState('year', '2017')
+</script>
+</body>
+</html>

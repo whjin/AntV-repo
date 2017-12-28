@@ -4,6 +4,7 @@
   "description": "antv",
   "main": "index.js",
   "dependencies": {
+    "@antv/data-set": "^0.8.2",
     "@antv/g2": "^3.0.3"
   },
   "devDependencies": {
